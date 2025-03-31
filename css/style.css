@@ -10,7 +10,9 @@
     --background-color: #f5f5f5;
     /* Cinza claro */
     --text-color: #333;
-    --text-muted-color: #abc;
+    --text-muted-color: #a9a6a6;
+    --color-dark-100: #222;
+    --color-dark-300: #7a7a75;
     --border-color: #ddd;
 }
 
@@ -127,6 +129,54 @@ header {
         &:hover {
             color: var(--accent-color);
             transform: translateY(15%) scale(104%);
+        }
+    }
+}
+
+#emptyspace {
+    height: 80vh;
+    background-color: var(--text-muted-color);
+}
+
+.site-footer {
+    text-align: center;
+    background-color: var(--background-dark);
+    color: var(--color-dark-300);
+    min-height: 300px;
+
+    .container {
+        padding: 80px 0;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+        gap: 10px;
+    }
+
+    svg {
+        fill: var(--accent-color);
+    }
+
+    a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: var(--color-dark-300);
+        border-radius: 50%;
+        transition: 100ms ease-in-out;
+
+        &:hover {
+            background-color: #ffcc00;
+            transform: translateY(15%) scale(104%);
+
+            svg {
+                fill: var(--color-dark-300);
+            }
         }
     }
 }
