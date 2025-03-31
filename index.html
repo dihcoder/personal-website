@@ -41,7 +41,17 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Theme and Color -->
-    <meta name="theme-color" content="#3498db">
+    <meta name="theme-color" content="#222222">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Diego Medeiros | Full-Stack Web Developer</title>
 </head>
@@ -67,6 +77,10 @@
     <main>
         <section id="home" class="hero-section" aria-labelledby="self-introduction">
             <div class="container">
+                <img class="author-photo" src="images/cover-picture.png"
+                    srcset="images/cover-picture-small.png 322w, images/cover-picture-medium.png 537w"
+                    sizes="(max-width: 600px) 60vw, (max-width: 1200px) 40vw, 400px" alt="Author cover photo">
+
                 <div class="hero-content">
                     <div class="overlay"></div>
                     <div class="hero-text">
@@ -74,7 +88,7 @@
                             Hello, I'm
                             <span class="highlight">Diego Medeiros</span>
                         </h1>
-                        <p class="subtitle">AND THIS IS MY RESUME</p>
+                        <p class="subtitle">and this is my resume</p>
                         <a href="#contact" class="cta-button">Get in touch</a>
                     </div>
                 </div>
