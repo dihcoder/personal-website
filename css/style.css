@@ -152,7 +152,8 @@ header {
     }
 
     .portfolio-filters ul {
-        display: flex;
+        /* display: flex; */
+        display: none; /* freeze filters */
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
