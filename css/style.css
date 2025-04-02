@@ -157,7 +157,7 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
-        margin: 40px 0;
+        margin-top: 40px;
 
         li {
             transition: 100ms ease-out 100ms;
@@ -180,6 +180,7 @@ header {
         gap: 40px;
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
+        margin-top: 40px;
 
         .portfolio-item {
             text-align: center;
