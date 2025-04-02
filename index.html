@@ -57,15 +57,17 @@
 </head>
 
 <body>
-    <header style="display: none;">
+    <header>
         <div class="container">
             <nav aria-label="Main navigation">
                 <ul class="nav-menu">
                     <li><a href="#home" class="active" aria-current="page">HOME</a></li>
                     <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <!--
                     <li><a href="#resume">RESUME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+                    -->
                 </ul>
                 <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Navigation menu">
                     <span class="hamburger"></span>
@@ -95,7 +97,48 @@
             </div>
         </section>
 
-        <section id="emptyspace"></section>
+        <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
+            <div class="container">
+                <h2 id="portfolio-title">Featured <strong>Portfolio</strong></h2>
+
+                <nav class="portfolio-filters">
+                    <ul>
+                        <li class="active">All</li>
+                        <li>Institutional Websites</li>
+                        <li>Blogs</li>
+                        <li>Landing Pages</li>
+                        <li>Chatbots and AI</li>
+                        <li>Management Systems</li>
+                    </ul>
+                </nav>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item" data-category="institutional">
+                        <figure>
+                            <img src="/images/institutional.jpg" alt="Barrocas Quilombo's Website">
+                            <figcaption>Barrocas Quilombo's Website</figcaption>
+                        </figure>
+                        <p class="portfolio-category">WEBSITE</p>
+                    </article>
+
+                    <article class="portfolio-item" data-category="systems">
+                        <figure>
+                            <img src="/images/gamelist.jpg" alt="Game List Management System">
+                            <figcaption>Game List Management System</figcaption>
+                        </figure>
+                        <p class="portfolio-category">SYSTEMS</p>
+                    </article>
+
+                    <article class="portfolio-item" data-category="packaging">
+                        <figure>
+                            <img src="/images/bot.jpg" alt="Customer Service Chatbot">
+                            <figcaption>Customer Service Chatbot</figcaption>
+                        </figure>
+                        <p class="portfolio-category">AI</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
     </main>
 
