@@ -208,10 +208,14 @@ header {
     gap: 30px;
     
     .resume-column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
         h3 {
             font-size: 1.4rem;
             font-weight: 100;
-            margin: 60px auto 30px;
+            margin: 60px auto 0;
         }
         
         .resume-card {
