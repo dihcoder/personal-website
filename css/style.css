@@ -1,13 +1,12 @@
 :root {
     --color-primary: #ffcc00;
     --color-secondary: #45a2ff;
-    --color-light: #fff;
-    --background-dark: #222;
-    --text-color: #333;
-    --text-color-dark: #7a7a75;
-    --text-muted-color: #a9a6a6;
-    --color-dark-300: #7a7a75;
-    --border-color: #ddd;
+    --color-light-100: #fff;
+    --color-dark-100: #111;
+    --color-dark-200: #222;
+    --color-dark-300: #333;
+    --color-dark-400: #7a7a75;
+    --color-dark-500: #a9a6a6;
 }
 
 * {
@@ -46,7 +45,7 @@ header {
     }
 
     a {
-        color: var(--text-muted-color);
+        color: var(--color-dark-500);
         transition: 100ms ease-out 100ms;
         padding: 10px;
         display: inline-block;
@@ -91,7 +90,7 @@ header {
         top: 60%;
         left: 50%;
         transform: translate(-50%, -40%);
-        color: var(--color-light);
+        color: var(--color-light-100);
         text-align: center;
         user-select: none;
 
@@ -114,7 +113,7 @@ header {
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 400;
-            color: var(--text-muted-color);
+            color: var(--color-dark-500);
             margin-top: 1rem;
         }
 
@@ -124,7 +123,7 @@ header {
             margin-top: 1.5rem;
             padding: 10px;
             transition: 100ms ease-out 100ms;
-            color: var(--color-light);
+            color: var(--color-light-100);
 
             &:hover {
                 color: var(--color-primary);
@@ -135,79 +134,124 @@ header {
     }
 }
 
-.portfolio-section {
-    background-color: var(--background-dark);
-    color: var(--color-light);
+.portfolio-section, .resume-section {
+    background-color: var(--color-dark-200);
+    color: var(--color-light-100);
+}
 
-    #portfolio-title {
-        font-weight: 100;
-        font-size: 1.8rem;
-        text-align: center;
+#portfolio-title, #resume-title {
+    font-weight: 100;
+    font-size: 1.8rem;
+    text-align: center;
 
-        strong {
-            line-height: 1.2;
-            font-family: "Archivo Black", sans-serif;
-            font-style: normal;
+    strong {
+        line-height: 1.2;
+        font-family: "Archivo Black", sans-serif;
+        font-style: normal;
+    }
+}
+
+.portfolio-filters ul {
+    /* display: flex; */
+    display: none; /* freeze filters */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+
+    li {
+        transition: 100ms ease-out 100ms;
+        cursor: pointer;
+
+        &:hover, &.active {
+            color: var(--color-primary);
+        }
+
+        &:hover {
+            transition: 100ms ease-in;
+            transform: translateY(10%) scale(104%);
         }
     }
+}
 
-    .portfolio-filters ul {
-        /* display: flex; */
-        display: none; /* freeze filters */
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-        margin-top: 40px;
+.portfolio-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin-top: 40px;
 
-        li {
-            transition: 100ms ease-out 100ms;
-            cursor: pointer;
+    .portfolio-item {
+        text-align: center;
 
-            &:hover, &.active {
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        p {
+            margin-top: .8rem;
+            font-size: .7rem;
+            font-weight: 100;
+        }
+    }
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    
+    .resume-column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 100;
+            margin: 60px auto 0;
+        }
+        
+        .resume-card {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: var(--color-dark-300);
+            border-radius: 10px;
+            padding: 30px;
+
+            .resume-date {
+                font-size: .8rem;
+            }
+
+            .resume-title {
+                font-size: 1.2rem;
+                font-weight: 100;
                 color: var(--color-primary);
             }
 
-            &:hover {
-                transition: 100ms ease-in;
-                transform: translateY(10%) scale(104%);
+            .resume-description, .resume-institution {
+                color: var(--color-dark-500);
+                font-size: .9rem;
             }
-    
+
+            .resume-institution {
+                margin-top: .5rem;
+            }
         }
     }
-
-    .portfolio-grid {
-        display: grid;
-        gap: 40px;
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 100%;
-        margin-top: 40px;
-
-        .portfolio-item {
-            text-align: center;
-
-            img {
-                width: 100%;
-            }
-            
-            figcaption {
-                margin-top: 1rem;
-                font-size: 1.2rem;
-                font-weight: 100;
-            }
-
-            p {
-                margin-top: .8rem;
-                font-size: .7rem;
-                font-weight: 100;
-            }
-        }
-    } 
 }
 
 .site-footer {
     text-align: center;
-    background-color: var(--background-dark);
-    color: var(--text-color-dark);
+    background-color: var(--color-dark-200);
+    color: var(--color-dark-400);
     min-height: 300px;
 
     .social-links {
@@ -228,7 +272,7 @@ header {
         justify-content: center;
         align-items: center;
         padding: 10px;
-        background-color: var(--text-color-dark);
+        background-color: var(--color-dark-400);
         border-radius: 50%;
         transition: 100ms ease-out 100ms;
 
@@ -238,7 +282,7 @@ header {
             transform: translateY(10%) scale(104%);
 
             svg {
-                fill: var(--text-color-dark);
+                fill: var(--color-dark-400);
             }
         }
     }
