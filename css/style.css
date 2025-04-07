@@ -366,3 +366,116 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-bottom: 0;
+    }
+
+    .hero-section {
+        .author-photo {
+            min-height: 70vh;
+            width: 70%;
+        }
+
+        .hero-content {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+
+        .resume-column {
+            display: inherit;
+            grid-template-columns: 1fr 1fr;
+
+            & > :first-child {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .about-section {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+
+            .about-image {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .about-content {
+                width: 80vw;
+                height: 50vh;
+                
+                #about-title {
+                    margin-top: 0;
+                    text-align: center;
+                }
+
+                .about-location {
+                    text-align: center;
+                }
+
+                .about-actions {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        padding: 100px 40px 0;
+    }
+
+    header .nav-menu {
+        display: none;
+    }
+
+    .hero-section {
+        .author-photo {
+            width: 100%;
+        }
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+
+        .resume-column {
+            display: flex;
+
+            h3 {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .about-section {
+        .container {
+
+            .about-image {
+                width: 100%;
+                height: 30vh;
+            }
+
+            .about-content {
+                width: 80vw;
+                height: 50vh;
+            }
+        }
+    }
+}
