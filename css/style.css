@@ -644,4 +644,25 @@ header {
             }
         }
     }
+
+    .testimonials-grid {
+        .testimonial-card {
+            margin-left: 0;
+
+            &::after {
+                display: none;
+            }
+
+            .testimonial-author {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .author-avatar {
+                position: relative;
+                right: unset;
+            }
+        }
+    }
 }
