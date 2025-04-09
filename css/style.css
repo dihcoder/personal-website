@@ -134,12 +134,12 @@ header {
     }
 }
 
-.portfolio-section, .resume-section, .about-section {
+.portfolio-section, .resume-section, .about-section, .testimonials-section {
     background-color: var(--color-dark-200);
     color: var(--color-light-100);
 }
 
-#portfolio-title, #resume-title, #about-title {
+#portfolio-title, #resume-title, #about-title, #testimonial-title {
     font-weight: 100;
     font-size: 1.8rem;
     text-align: center;
@@ -327,6 +327,58 @@ header {
     }
 }
 
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+
+    .testimonial-card {
+        background-color: var(--color-dark-300);
+        padding: 30px;
+        margin-left: 100px;
+        position: relative;
+        border-radius: 10px;
+
+        &::after {
+            width: 0;
+            height: 0;
+            content: '';
+            border-right: 30px solid var(--color-dark-300);
+            border-top: 0 solid transparent;
+            border-bottom: 20px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 40px;
+        }
+
+        blockquote {
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: var(--color-dark-500);
+        }
+
+        .author-info {
+            color: var(--color-dark-400);
+
+            .author-name {
+                color: var(--color-primary);
+                font-weight: 100;
+            }
+        }
+
+        .author-avatar {
+            position: absolute;
+            right: calc(100% + 40px);
+            top: 0;
+            
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
 .site-footer {
     text-align: center;
     background-color: var(--color-dark-200);
@@ -364,6 +416,12 @@ header {
                 fill: var(--color-dark-400);
             }
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
     }
 }
 
