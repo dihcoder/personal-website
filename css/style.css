@@ -434,6 +434,7 @@ header {
         .service-link {
             font-size: .9rem;
             align-self: center;
+            margin-top: auto;
             color: var(--color-primary);
         }
     }
