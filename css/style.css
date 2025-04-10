@@ -5,8 +5,9 @@
     --color-dark-100: #111;
     --color-dark-200: #222;
     --color-dark-300: #333;
-    --color-dark-400: #7a7a75;
-    --color-dark-500: #a9a6a6;
+    --color-dark-400: #444;
+    --color-dark-500: #7a7a75;
+    --color-dark-600: #a9a6a6;
 }
 
 * {
@@ -24,6 +25,18 @@
     max-width: 1200px;
     width: 100%;
     padding: 100px 20px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* header & navbar */
@@ -53,7 +66,7 @@ header {
         gap: 20px;
 
         a {
-            color: var(--color-dark-500);
+            color: var(--color-dark-600);
             padding: 10px;
             display: inline-block;
     
@@ -127,7 +140,7 @@ header {
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 400;
-            color: var(--color-dark-500);
+            color: var(--color-dark-600);
             margin-top: 1rem;
         }
 
@@ -148,12 +161,12 @@ header {
     }
 }
 
-.portfolio-section, .resume-section, .about-section, .testimonials-section, .services-section {
+.portfolio-section, .resume-section, .about-section, .testimonials-section, .services-section, .contact-section {
     background-color: var(--color-dark-200);
     color: var(--color-light-100);
 }
 
-#portfolio-title, #resume-title, #about-title, #testimonial-title, #services-title {
+#portfolio-title, #resume-title, #about-title, #testimonial-title, #services-title, #contact-title {
     font-weight: 100;
     font-size: 1.8rem;
     text-align: center;
@@ -251,7 +264,7 @@ header {
             }
 
             .resume-description, .resume-institution {
-                color: var(--color-dark-500);
+                color: var(--color-dark-600);
                 font-size: .9rem;
             }
 
@@ -270,7 +283,7 @@ header {
 
         .about-image {
             width: 50%;
-            background: radial-gradient(circle, var(--color-dark-500) 0%, var(--color-dark-400) 70%, var(--color-dark-300) 140%);
+            background: radial-gradient(circle, var(--color-dark-600) 0%, var(--color-dark-500) 70%, var(--color-dark-300) 140%);
             position: relative;
             height: auto;
 
@@ -296,7 +309,7 @@ header {
             p {
                 line-height: 1.3;
                 margin-bottom: 15px;
-                color: var(--color-dark-500);
+                color: var(--color-dark-600);
             }
     
             .about-actions {
@@ -326,11 +339,11 @@ header {
                     }
                     
                     &.btn-secondary {
-                        background-color: var(--color-dark-400);
+                        background-color: var(--color-dark-500);
                         color: var(--color-light-100);
 
                         &:hover {
-                            background-color: var(--color-dark-500);
+                            background-color: var(--color-dark-600);
                         }
                     }
                 }
@@ -367,11 +380,11 @@ header {
         blockquote {
             line-height: 1.3;
             margin-bottom: 15px;
-            color: var(--color-dark-500);
+            color: var(--color-dark-600);
         }
 
         .author-info {
-            color: var(--color-dark-400);
+            color: var(--color-dark-500);
 
             .author-name {
                 color: var(--color-primary);
@@ -426,7 +439,7 @@ header {
         }
         
         .service-description {
-            color: var(--color-dark-500);
+            color: var(--color-dark-600);
             font-size: .9rem;
             margin-bottom: 20px;
         }
@@ -440,10 +453,98 @@ header {
     }
 }
 
+.contact-section .container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    #contact-title {
+        grid-column: span 2;
+    }
+
+    .contact-form-wrapper, .contact-details {
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 100;
+            margin: 60px auto 30px 0;
+        }
+
+        input, textarea {
+            background-color: var(--color-dark-300);
+            color: var(--color-light-100);
+            width: 100%;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+
+            &::placeholder {
+                color: var(--color-dark-500);
+                font-size: .9rem;
+                font-weight: 600;
+            }
+
+            &:focus {
+                outline: none;
+                background-color: var(--color-dark-400);
+                color: var(--color-light-100);
+            }
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: .8rem;
+            transition: 100ms ease-out 100ms;
+            margin-top: 30px;
+            margin-right: auto;
+            width: fit-content;
+
+            &:hover {
+                transition: 100ms ease-in;
+                transform: translateY(10%) scale(104%);
+            }
+
+            
+            &.btn-primary {
+                background-color: var(--color-primary);
+                color: var(--color-dark-100);
+
+                &:hover {
+                    background-color: var(--color-secondary);
+                }
+            }
+        }
+    }
+
+    .contact-form-wrapper + .contact-details {
+        margin-left: 60px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-details-list {
+        font-size: .9rem;
+        dt {
+            color: var(--color-dark-500);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        dd, dd a {
+            color: var(--color-dark-600);
+            margin-bottom: 30px;
+        }
+    }
+}
+
 .site-footer {
     text-align: center;
     background-color: var(--color-dark-200);
-    color: var(--color-dark-400);
+    color: var(--color-dark-500);
     min-height: 300px;
 
     .social-links {
@@ -464,7 +565,7 @@ header {
         justify-content: center;
         align-items: center;
         padding: 10px;
-        background-color: var(--color-dark-400);
+        background-color: var(--color-dark-500);
         border-radius: 50%;
         transition: 100ms ease-out 100ms;
 
@@ -474,7 +575,7 @@ header {
             transform: translateY(10%) scale(104%);
 
             svg {
-                fill: var(--color-dark-400);
+                fill: var(--color-dark-500);
             }
         }
     }
@@ -598,7 +699,7 @@ header {
 
             a {
                 font-size: 1.5rem;
-                color: var(--color-dark-400);
+                color: var(--color-dark-500);
             }
 
             &.mobile-visible {
@@ -617,7 +718,7 @@ header {
             border: none;
 
             .hamburger {
-                --hamburger-color: var(--color-dark-400);
+                --hamburger-color: var(--color-dark-500);
                 position: absolute;
                 width: 38px;
                 height: 4px;
