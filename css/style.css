@@ -242,7 +242,7 @@ header {
         h3 {
             font-size: 1.4rem;
             font-weight: 100;
-            margin: 60px auto 0;
+            margin: 60px auto 0 0;
         }
         
         .resume-card {
@@ -781,12 +781,13 @@ header {
 
     .resume-grid {
         grid-template-columns: 1fr;
+        gap: 0;
 
         .resume-column {
             display: flex;
 
             h3 {
-                margin-top: 20px;
+                margin-top: 40px;
             }
         }
     }
