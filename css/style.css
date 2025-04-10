@@ -503,7 +503,6 @@ header {
                 transition: 100ms ease-in;
                 transform: translateY(10%) scale(104%);
             }
-
             
             &.btn-primary {
                 background-color: var(--color-primary);
@@ -662,9 +661,7 @@ header {
                 }
             }
         }
-    }
-
-    
+    }    
 }
 
 @media screen and (max-width: 640px) {
@@ -795,8 +792,9 @@ header {
     }
 
     .about-section {
-        .container {
+        padding-bottom: 100px;
 
+        .container {
             .about-image {
                 width: 100%;
                 height: 30vh;
@@ -828,5 +826,17 @@ header {
                 right: unset;
             }
         }
+    }
+
+    .contact-section .container {
+        display: flex;
+        flex-direction: column;
+    
+        .contact-details {
+            margin-left: 0 !important;
+        }
+        /* #contact-title {
+            grid-column: span 2;
+        } */
     }
 }
