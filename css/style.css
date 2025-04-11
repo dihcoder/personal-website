@@ -27,6 +27,17 @@
     padding: 100px 20px;
 }
 
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background: radial-gradient(circle, rgba(103, 103, 103, 1) 0%, rgba(85, 85, 85, 1) 50%, rgba(34, 34, 34, 1) 100%);
+    z-index: -1;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -39,19 +50,27 @@
     border: 0;
 }
 
+body {
+    position: relative;
+}
+
 /* header & navbar */
 header {
-    position: fixed;
-    padding: 1rem 0;
-    top: 0;
+    /* position: fixed; */
+    /* padding: 1rem 0; */
+    /* top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* top: -10px; */
     z-index: 99;
     width: 100%;
     height: 60px;
     display: flex;
     justify-content: center;
-    /* background-color: var(--color-light-100); */
+    align-items: flex-end;
 
     .container {
         display: flex;
@@ -65,17 +84,18 @@ header {
         justify-content: center;
         gap: 20px;
 
-        a {
+        li {
             color: var(--color-dark-600);
-            padding: 10px;
+            padding: 5px;
             display: inline-block;
+            cursor: pointer;
     
             &.active {
                 color: var(--color-primary);
             }
         }
         
-        &:not(.mobile-visible) a {
+        &:not(.mobile-visible) li {
             transition: 100ms ease-out 100ms;
             
             &:hover {
@@ -92,13 +112,31 @@ header {
     }
 }
 
+.site-header.fixed {
+    position: fixed;
+    align-items: center;
+    background-color: var(--color-light-100);
+    top: -60px;
+    animation: slide-in 300ms ease-in forwards;
+    
+    li {
+        color: var(--color-dark-400);
+    }
+}
+
+@keyframes slide-in {
+    100% {
+        top: 0;
+    }
+    
+}
+
 /* hero section */
 .hero-section {
     width: 100%;
     height: 100vh;
     min-height: 600px;
     position: relative;
-    background: radial-gradient(circle, rgba(103, 103, 103, 1) 0%, rgba(85, 85, 85, 1) 50%, rgba(34, 34, 34, 1) 100%);
     overflow: hidden;
 
     .author-photo {
@@ -106,7 +144,6 @@ header {
         left: 50%;
         top: 10vh;
         min-height: 90vh;
-        /* max-height: 80vh; */
         bottom: 0;
         margin-top: 10vh;
         filter: grayscale(.3) brightness(.5);
@@ -179,8 +216,7 @@ header {
 }
 
 .portfolio-filters ul {
-    /* display: flex; */
-    display: none; /* freeze filters */
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
@@ -670,6 +706,7 @@ header {
     }
 
     header {
+        position: fixed;
         background-color: var(--color-light-100);
         height: 60px;
         justify-content: left;
@@ -694,7 +731,7 @@ header {
             background-color: var(--color-light-100);
             transition: left 200ms ease-in-out 100ms;
 
-            a {
+            li {
                 font-size: 1.5rem;
                 color: var(--color-dark-500);
             }
@@ -855,8 +892,5 @@ header {
         .contact-details {
             margin-left: 0 !important;
         }
-        /* #contact-title {
-            grid-column: span 2;
-        } */
     }
 }
