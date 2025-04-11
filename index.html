@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Fake Personal Portfolio of Diego Medeiros, a full-stack web developer specialized in Angular, UX Design and Java.">
-    <meta name="keywords" content="web developer, portfolio, full-stack, Angular, Java">
+        content="Personal Portfolio of Diego Medeiros, a full-stack web developer specialized in Angular, UX Design and Java.">
+    <meta name="keywords" content="web developer, personal website, portfolio, full-stack, Angular, Java">
     <meta name="author" content="Diego Medeiros">
 
     <!-- Cache control and updates -->
@@ -17,27 +17,19 @@
     <meta property="og:title" content="Diego Medeiros | Full-Stack web developer">
     <meta property="og:description"
         content="Diego Medeiros' portfolio, full-stack web developer specialized in React, UX Design and Java.">
-    <meta property="og:image" content="https://www.dihcoder.com/images/profile-cover.jpg">
-    <meta property="og:url" content="https://www.dihcoder.com">
+    <meta property="og:image" content="https://github.com/dihcoder/personal-website/blob/c7d13c0ccbddca1c819b8a2737c1d233d78df543/images/cover-picture-small.png?raw=true">
+    <meta property="og:url" content="https://dihcoder.github.io/personal-website/">
     <meta property="og:type" content="profile">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@dihcoder">
-    <meta name="twitter:title" content="Diego Medeiros | Full-Stack web developer">
-    <meta name="twitter:description"
-        content="Diego Medeiros' portfolio, full-stack web developer specialized in React, UX Design and Java.">
-    <meta name="twitter:image" content="https://www.dihcoder.com/images/profile-cover.jpg">
 
     <!-- Robots and Indexing -->
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.dihcoder.com">
+    <link rel="canonical" href="https://dihcoder.github.io/personal-website/">
 
     <!-- Icons and Favicons -->
-    <link rel="icon" href="/images/favicon/favicon-32x32.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
 
     <!-- Theme and Color -->
     <meta name="theme-color" content="#222222">
@@ -77,6 +69,7 @@
     </header>
 
     <main>
+        <!-- HOME SECTION -->
         <section id="home" class="hero-section" aria-labelledby="self-introduction">
             <div class="container">
                 <img class="author-photo" src="images/cover-picture.png"
@@ -84,19 +77,17 @@
                     sizes="(max-width: 600px) 60vw, (max-width: 1200px) 40vw, 400px" alt="Author cover photo">
 
                 <div class="hero-content">
-                    <div class="overlay"></div>
-                    <div class="hero-text">
-                        <h1 id="self-introduction">
-                            Hello, I'm
-                            <span class="highlight">Diego Medeiros</span>
-                        </h1>
-                        <p class="subtitle">and this is my resume</p>
-                        <a href="#contact" class="cta-button">Get in touch</a>
-                    </div>
+                    <h1 id="self-introduction">
+                        Hello, I'm
+                        <span class="highlight">Diego Medeiros</span>
+                    </h1>
+                    <p class="subtitle">and this is my resume</p>
+                    <a href="#contact" class="cta-button">Get in touch</a>
                 </div>
             </div>
         </section>
 
+        <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
             <div class="container">
                 <h2 id="portfolio-title">Featured <strong>Portfolio</strong></h2>
@@ -113,7 +104,7 @@
                 </nav>
 
                 <div class="portfolio-grid">
-                    <article class="portfolio-item" data-category="institutional">
+                    <article class="portfolio-item" data-category="websites">
                         <figure>
                             <img src="images/institutional.jpg" alt="Barrocas Quilombo's Website">
                             <figcaption>Barrocas Quilombo's Website</figcaption>
@@ -129,7 +120,7 @@
                         <p class="portfolio-category">SYSTEMS</p>
                     </article>
 
-                    <article class="portfolio-item" data-category="packaging">
+                    <article class="portfolio-item" data-category="chatbots-and-ai">
                         <figure>
                             <img src="images/bot.jpg" alt="Customer Service Chatbot">
                             <figcaption>Customer Service Chatbot</figcaption>
@@ -140,68 +131,67 @@
             </div>
         </section>
 
+        <!-- RESUME SECTION -->
         <section id="resume" class="resume-section" aria-labelledby="resume-title">
             <div class="container">
-                <h2 id="resume-title">My <strong>Resume</strong></h2>
-                
+                <h2 id="resume-title">
+                    My 
+                    <strong>Resume</strong>
+                </h2>
                 <div class="resume-grid">
-                    <!-- Education Section -->
+
+                    <!-- EDUCATION COLUMN -->
                     <div class="resume-column">
                         <h3>Education</h3>
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                    March 2024 - July 2024
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                March 2024 - July 2024
+                            </span>
                             <h4 class="resume-title">Design Thinking & UX/UI</h4>
                             <p class="resume-description">
                                 Covers Design Thinking, UX, and UI principles to create user-centered products. Includes research, ideation, prototyping, and validation. Features case studies, hands-on exercises, and responsive design best practices. Students apply methodologies in practical projects, enhancing problem-solving and interactive design skills.
                             </p>
                             <p class="resume-institution">Ultima School</p>
                         </div>
+
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                      February 2023 - January 2025
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                    February 2023 - January 2025
+                            </span>
                             <h4 class="resume-title">Bachelor's Degree in Software Engineering</h4>
                             <p class="resume-description">
                                 Covers programming, software architecture, data modeling, and distributed systems. Includes AI, cybersecurity, web development, and cloud computing, with a focus on agile methodologies. Emphasizes hands-on projects to develop problem-solving, innovation, and entrepreneurship skills for success in the tech industry.
                             </p>
                             <p class="resume-institution">Unopar University</p>
                         </div>
+
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                    August 2023 - April 2024
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                August 2023 - April 2024
+                            </span>
                             <h4 class="resume-title">Java Development Course</h4>
                             <p class="resume-description">
                                 Focuses on Java, OOP, Spring, and Hibernate for scalable applications. Covers web development with JSP, Servlets, and REST APIs, plus database management with relational and NoSQL systems. Includes best practices like testing, version control, and agile methodologies for efficient software development.
                             </p>
                             <p class="resume-institution">Ultima School</p>
                         </div>
+
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                    March 2023 - June 2023
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                March 2023 - June 2023
+                            </span>
                             <h4 class="resume-title">Web Development Bootcamp</h4>
                             <p class="resume-description">
                                 Covers front-end and back-end technologies, including HTML, CSS, JavaScript, Node.js, Express, React, and MongoDB. Focuses on building real-world projects, RESTful APIs, and responsive websites. Includes Git, deployment strategies, and coding best practices to prepare for web development roles.
@@ -210,48 +200,44 @@
                         </div>
                     </div>
             
-                    <!-- Experience Section -->
+                    <!-- EXPERIENCE COLUMN -->
                     <div class="resume-column">
                         <h3>Experience</h3>
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                    June 2024 - Present
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                June 2024 - Present
+                            </span>
                             <h4 class="resume-title">Freelance Web Developer & UX Designer</h4>
                             <p class="resume-description">
                                 Designs and develops web applications, websites, and digital solutions with a focus on front-end, UX, and back-end functionality. Ensures responsive, high-performance designs with accessibility, SEO, and cloud integration. Works closely with clients to deliver tailored, scalable solutions.
                             </p>
                             <p class="resume-institution">Self-Employed</p>
                         </div>
+
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                    December 2022 - July 2023
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                December 2022 - July 2023
+                            </span>
                             <h4 class="resume-title">Logistics Assistant</h4>
                             <p class="resume-description">
                                 Handled shipping, unloading, and processing of bulky items, ensuring timely dispatch. Managed returns, inventory audits, and stock control using Excel and Google Sheets. Optimized workflows, tracked assets, and collaborated with teams to improve logistics operations and warehouse organization.
                             </p>
                             <p class="resume-institution">Kuehne Nagel</p>
                         </div>
+
                         <div class="resume-card">
-                            <div class="resume-header">
-                                <span class="resume-date">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
-                                        <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
-                                      </svg> 
-                                    February 2019 - July 2021
-                                </span>
-                            </div>
+                            <span class="resume-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M 184 24 Q 182 2 160 0 Q 138 2 136 24 L 136 64 L 136 64 L 96 64 L 96 64 Q 69 65 51 83 Q 33 101 32 128 L 32 144 L 32 144 L 32 192 L 32 192 L 32 448 L 32 448 Q 33 475 51 493 Q 69 511 96 512 L 416 512 L 416 512 Q 443 511 461 493 Q 479 475 480 448 L 480 192 L 480 192 L 480 144 L 480 144 L 480 128 L 480 128 Q 479 101 461 83 Q 443 65 416 64 L 376 64 L 376 64 L 376 24 L 376 24 Q 374 2 352 0 Q 330 2 328 24 L 328 64 L 328 64 L 184 64 L 184 64 L 184 24 L 184 24 Z M 80 192 L 432 192 L 80 192 L 432 192 L 432 448 L 432 448 Q 431 463 416 464 L 96 464 L 96 464 Q 81 463 80 448 L 80 192 L 80 192 Z"/>
+                                    </svg> 
+                                February 2019 - July 2021
+                            </span>
                             <h4 class="resume-title">Shipping Assistant</h4>
                             <p class="resume-description">
                                 Performed order picking, inventory control, and packaging for shipment. Conducted cycle counting to ensure stock accuracy. Applied Lean tools to enhance efficiency, reduce waste, and optimize logistics processes. Worked with teams to streamline operations and improve order fulfillment.
@@ -285,11 +271,11 @@
                     </p>
         
                     <div class="about-actions">
-                        <a href="#hireme" class="btn btn-primary" aria-label="Hire professional">
+                        <a href="tel:+55-77-98153-9716" class="btn btn-primary" aria-label="Hire professional">
                             HIRE ME
                         </a>
         
-                        <a href="cv.pdf" class="btn btn-secondary" download aria-label="Download CV">
+                        <a href="#" class="btn btn-secondary" download aria-label="Download CV">
                             DOWNLOAD CV
                         </a>
                     </div>
@@ -299,14 +285,17 @@
         
         <section class="testimonials-section" aria-labelledby="testimonials-title">
             <div class="container">
-                <h2 id="testimonial-title" class="section-title">Client <strong>Testimonial</strong></h2>
+                <h2 id="testimonial-title" class="section-title">
+                    Client 
+                    <strong>Testimonial</strong>
+                </h2>
 
                 <div class="testimonials-grid">
                     <article class="testimonial-card">
                         <div class="testimonial-content">
                             <blockquote>
                                 "I worked with Diego in the same group and had the opportunity to closely observe his dedication and professionalism. Diego always showed great commitment to his responsibilities and was also an excellent team player. His ability to solve problems efficiently and his organizational skills in the workplace significantly contributed to the success of our logistics operations.
-
+                                <br/><br/>
                                 I enthusiastically recommend Diego for any position or project he becomes involved in. I'm confident he will be a valuable asset to any team."
                             </blockquote>
                             <div class="testimonial-author">
@@ -326,7 +315,7 @@
                         <div class="testimonial-content">
                             <blockquote>
                                 "Diego is an exemplary professional, focused on his goals and always willing to collaborate with the team whenever needed. His dedication and proactivity make a real difference in the work environment, ensuring positive results and a great organizational climate.
-
+                                <br/><br/>
                                 Moreover, he shows strong commitment in all his activities, being a key contributor to the success of any project. I confidently recommend Diego for any professional challenge."
                             </blockquote>
                             <div class="testimonial-author">
@@ -347,7 +336,10 @@
 
         <section class="services-section" aria-labelledby="services-title">
             <div class="container">
-                <h2 id="services-title" class="section-title">My <strong>Services</strong></h2>
+                <h2 id="services-title" class="section-title">
+                    My 
+                    <strong>Services</strong>
+                </h2>
         
                 <div class="services-grid">
                     <article class="service-card">
@@ -416,6 +408,7 @@
             <div class="container">
                 <h2 id="contact-title" class="section-title">Get in <strong>Touch</strong></h2>
         
+                <!-- FORM COLUMN -->
                 <div class="contact-form-wrapper">
                     <h3>Get In Touch</h3>
                     <form class="contact-form" action="/submit-form" method="POST">
@@ -449,26 +442,27 @@
                     </form>
                 </div>
         
+                <!-- CONTACT COLUMN -->
                 <div class="contact-details">
                     <h3>My Contact Details</h3>
                     <dl class="contact-details-list">
                         <dt>Email</dt>
                         <dd>
-                            <a href="mailto:site@gmail.com" aria-label="Send email to site@gmail.com">
+                            <a href="mailto:coderdih@gmail.com" aria-label="Send email to coderdih@gmail.com">
                             coderdih@gmail.com
                             </a>
                         </dd>
                         
                         <dt>Phone</dt>
                         <dd>
-                            <a href="tel:+55-77-99853-9716" aria-label="Call phone number +55 77 99853-9716">
-                            +55 77 99853-9716
+                            <a href="tel:+55-77-98153-9716" aria-label="Call phone number +55 77 98153-9716">
+                            +55 77 98153-9716
                             </a>
                         </dd>
                         
                         <dt>WhatsApp</dt>
                         <dd>
-                            <a href="https://wa.me/5577998539716?text=Hi%2C%20I%20found%20your%20contact%20on%20your%20personal%20website.%20Let's%20chat%3F">(77) 99853-9716</a>
+                            <a href="https://wa.me/5577981539716?text=Hi%2C%20I%20found%20your%20contact%20on%20your%20personal%20website.%20Let's%20chat%3F">(77) 98153-9716</a>
                         </dd>
                         
                         <dt>Address</dt>
