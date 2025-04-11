@@ -51,15 +51,16 @@
 </head>
 
 <body>
-    <header>
+    <div class="background"></div>
+    <header class="site-header">
         <div class="container">
             <nav aria-label="Main navigation">
                 <ul class="nav-menu">
-                    <li><a href="#home" class="active" aria-current="page">HOME</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#resume">RESUME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li class="active" data-section="home" aria-current="page">HOME</li>
+                    <li data-section="portfolio">PORTFOLIO</li>
+                    <li data-section="resume">RESUME</li>
+                    <li data-section="about">ABOUT</li>
+                    <li data-section="contact">CONTACT</li>
                 </ul>
                 <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Navigation menu">
                     <span class="hamburger"></span>
