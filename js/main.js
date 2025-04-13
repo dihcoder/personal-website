@@ -1,10 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu li');
 
-    document.querySelectorAll('[data-section]').forEach(link => {
+    navLinks.forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
+            if (this.classList.contains("active")) {
+                return;
+            }
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+            });
+            this.classList.add("active");
             let section = document.getElementById(this.getAttribute("data-section"));
             section.scrollIntoView({ behavior: "smooth" });
         });
