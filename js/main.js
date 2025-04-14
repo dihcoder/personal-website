@@ -6,18 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
-            if (this.classList.contains("active")) {
-                return;
-            }
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-            });
-            this.classList.add("active");
+            changeActiveLink(this);
             let section = document.getElementById(this.getAttribute("data-section"));
             section.scrollIntoView({ behavior: "smooth" });
         });
     });
     
+    // Change the active nav link
+    function changeActiveLink(currentLink) {
+        if (currentLink.classList.contains("active")) {
+            return;
+        }
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+        });
+        currentLink.classList.add("active");
+    }
 
     document.addEventListener('click', (event) => {
         if (event.target.closest('.menu-toggle')) {
@@ -61,12 +65,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollY = window.scrollY;
         const viewportWidth = window.innerWidth;
         const halfViewportHeight = window.innerHeight / 2;
+        let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
         if (scrollY >= halfViewportHeight && viewportWidth > 640) {
             header.classList.add('fixed');
         } else {
             header.classList.remove('fixed');
         }
+
+        navLinks.forEach(link => {
+            const sectionId = link.getAttribute("data-section");
+            const section = document.getElementById(sectionId);
+        
+            if (!section) return;
+        
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+        
+            const isInSection = scrollPosition >= sectionTop - window.innerHeight / 3 && scrollPosition < sectionBottom;
+        
+            if (isInSection) {
+                changeActiveLink(link);
+            }
+        });
     }
 
     window.addEventListener('scroll', throttle(handleScroll, 200));
