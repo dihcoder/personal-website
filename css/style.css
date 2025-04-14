@@ -51,6 +51,7 @@
 }
 
 .fade-in {
+    opacity: 0.1;
     animation: fade-in 1s ease-in-out forwards;
     animation-timeline: view();
     animation-range-end: 40vh;
@@ -59,7 +60,7 @@
 @keyframes fade-in {
     0% {
         scale: 0.8;
-        opacity: 0;
+        opacity: 0.1;
     }
     100% {
         scale: 1;
