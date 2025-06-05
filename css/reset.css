@@ -1,0 +1,251 @@
+:root {
+    --color-primary: #ffcc00;
+    --color-secondary: #ffe600;
+    --color-light-100: #fff;
+    --color-dark-100: #111;
+    --color-dark-200: #222;
+    --color-dark-300: #333;
+    --color-dark-400: #444;
+    --color-dark-500: #7a7a75;
+    --color-dark-600: #a9a6a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 100px 20px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background: radial-gradient(circle, rgba(103, 103, 103, 1) 0%, rgba(85, 85, 85, 1) 50%, rgba(34, 34, 34, 1) 100%);
+    z-index: -1;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.fade-in {
+    opacity: 0.1;
+    animation: fade-in 1s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range-end: 40vh;
+}
+
+@keyframes fade-in {
+    0% {
+        scale: 0.8;
+        opacity: 0.1;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+body {
+    position: relative;
+}
+
+/* --- Estilos Gerais para Seções (Não em arquivos específicos solicitados) --- */
+/* Estes estilos se aplicam a múltiplas seções ou são para seções que não foram listadas explicitamente para refatoração. */
+.portfolio-section,
+.resume-section,
+.about-section,
+.testimonials-section,
+.services-section,
+.contact-section {
+    background-color: var(--color-dark-200);
+    color: var(--color-light-100);
+}
+
+#portfolio-title,
+#resume-title,
+#about-title,
+#testimonial-title,
+#services-title,
+#contact-title {
+    font-weight: 100;
+    font-size: 1.8rem;
+    text-align: center;
+
+    strong {
+        line-height: 1.2;
+        font-family: "Archivo Black", sans-serif;
+        font-style: normal;
+    }
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    .resume-column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 100;
+            margin: 60px auto 0 0;
+        }
+
+        .resume-card {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: var(--color-dark-300);
+            border-radius: 10px;
+            padding: 30px;
+
+            .resume-date {
+                font-size: .8rem;
+            }
+
+            .resume-title {
+                font-size: 1.2rem;
+                font-weight: 100;
+                color: var(--color-primary);
+            }
+
+            .resume-description,
+            .resume-institution {
+                color: var(--color-dark-600);
+                font-size: .9rem;
+            }
+
+            .resume-institution {
+                margin-top: .5rem;
+            }
+        }
+    }
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+
+    .testimonial-card {
+        background-color: var(--color-dark-300);
+        padding: 30px;
+        margin-left: 100px;
+        position: relative;
+        border-radius: 10px;
+
+        &::after {
+            width: 0;
+            height: 0;
+            content: '';
+            border-right: 30px solid var(--color-dark-300);
+            border-top: 0 solid transparent;
+            border-bottom: 20px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 40px;
+        }
+
+        blockquote {
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: var(--color-dark-600);
+        }
+
+        .author-info {
+            color: var(--color-dark-500);
+
+            .author-name {
+                color: var(--color-primary);
+                font-weight: 100;
+            }
+        }
+
+        .author-avatar {
+            position: absolute;
+            right: calc(100% + 40px);
+            top: 0;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.services-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-dark-300);
+        padding: 40px 30px;
+        border-radius: 10px;
+
+        .service-icon {
+            margin: 0 auto 20px;
+            width: 80px;
+            height: 80px;
+
+            svg {
+                background-color: var(--color-primary);
+                color: var(--color-dark-300);
+                padding: 8px;
+                border-radius: 50%;
+            }
+        }
+
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: 100;
+            color: var(--color-light-100);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-description {
+            color: var(--color-dark-600);
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            font-size: .9rem;
+            align-self: center;
+            margin-top: auto;
+            color: var(--color-primary);
+        }
+    }
+}

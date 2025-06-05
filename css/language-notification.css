@@ -1,0 +1,104 @@
+/* Styles for the language notification */
+.language-notification {
+    position: fixed;
+    bottom: 40px;
+    /* Distância do topo */
+    right: -350px;
+    /* Começa fora da tela (à direita) */
+    width: 320px;
+    /* Largura da notificação */
+    background-color: var(--color-light-100);
+    /* Cor de fundo clara */
+    color: var(--color-dark-400);
+    /* Cor do texto */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Sombra suave */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+    transition: right 0.5s ease-out, filter 0.2s ease-in-out;
+    /* Transição para a animação de entrada/saída */
+    filter: opacity(.7);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.language-notification:hover {
+    filter: opacity(1);
+}
+
+.language-notification.show {
+    right: 20px;
+    /* Posição final quando visível */
+}
+
+.language-notification.hide {
+    right: -350px;
+    /* Posição para esconder */
+}
+
+.language-notification p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+    line-height: 1.4;
+    /* margin-bottom: 15px; */
+    color: var(--color-dark-300);
+}
+
+.language-notification__link {
+    color: var(--color-dark-400);
+    /* Cor do link para mudar de idioma */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.language-notification__link:hover {
+    color: var(--color-dark-200);
+}
+
+.language-notification__close-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 4px 10px;
+    line-height: 1;
+    transition: color 0.3s ease;
+    border-radius: 100px;
+    transition: all 300ms ease-in-out;
+}
+
+.language-notification__close-button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-dark-400);
+}
+
+/* Opcional: Estilo para telas menores, se a notificação ficar muito grande */
+@media (max-width: 600px) {
+    .language-notification {
+        width: calc(100% - 40px);
+        /* Ocupa quase toda a largura em telas pequenas */
+        right: -100%;
+        /* Inicia completamente fora da tela */
+        top: 15px;
+    }
+
+    .language-notification.show {
+        right: 20px;
+    }
+
+    .language-notification.hide {
+        right: -100%;
+    }
+
+    .language-notification__close-button {
+        font-size: 3rem;
+    }
+}
