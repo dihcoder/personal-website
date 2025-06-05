@@ -79,26 +79,3 @@
     color: var(--color-primary);
     background-color: var(--color-dark-400);
 }
-
-/* Opcional: Estilo para telas menores, se a notificação ficar muito grande */
-@media (max-width: 600px) {
-    .language-notification {
-        width: calc(100% - 40px);
-        /* Ocupa quase toda a largura em telas pequenas */
-        right: -100%;
-        /* Inicia completamente fora da tela */
-        top: 15px;
-    }
-
-    .language-notification.show {
-        right: 20px;
-    }
-
-    .language-notification.hide {
-        right: -100%;
-    }
-
-    .language-notification__close-button {
-        font-size: 3rem;
-    }
-}
